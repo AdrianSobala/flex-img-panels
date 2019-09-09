@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+.panel {
+  background: #666666;
+  box-shadow: insert 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel-1 {
+  background-image: url(./images/img1.jpg);
+}
+.panel-2 {
+  background-image: url(./images/img2.jpg);
+}
+.panel-3 {
+  background-image: url(./images/img3.jpg);
+}
+.panel-4 {
+  background-image: url(./images/img4.jpg);
+}
+.panel-5 {
+  background-image: url(./images/img5.jpg);
+}
+
+footer {
+  text-align: center;
+}
